@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col size="12" size-sm class="ion-padding-start ion-padding-end">
+        <ion-button expand="block" color="success" (click)="googlelogin()">
+          <ion-thumbnail slot="start">
+            <img src="../../assets/imgs/google.png">
+          </ion-thumbnail>
+          Sign in with Google
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-sm class="ion-padding-start ion-padding-end">
+        <ion-button expand="block" color="dark" (click)="githublogin()">
+          <ion-thumbnail slot="start">
+            <img src="../../assets/imgs/github.png">
+          </ion-thumbnail>
+          Sign in with Github</ion-button>
+      </ion-col>
+      <ion-col size="12" size-sm class="ion-padding-start ion-padding-end">
+        <ion-button expand="block" color="primary">
+          <ion-thumbnail slot="start">
+            <img src="../../assets/imgs/facebook.png">
+          </ion-thumbnail>
+          Sign in with Facebook</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="email" [(ngModel)]="useremail"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button fill="solid" expand="block" color="dark" (click)="login()">Login</ion-button>
+  <ion-text class="ion-text-center">
+    <p routerLink="/register">Register</p>
+  </ion-text>
+
+</ion-content>
